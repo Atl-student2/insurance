@@ -1,0 +1,696 @@
+swagger: '2.0'
+info:
+  description: "The YuLife Life Insurance API enables full access to Life Insurance Policyholder records.\n\n![enter image description here](data:image/png;base64,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)"
+  version: 1.0.0
+  title: Yulife Life Insurance
+paths:
+  /yulife-life-insurance/query:
+    get:
+      tags:
+        - yulife-life-insurance
+      summary: 'Return specific Life Insurance Policyholder records via field query'
+      description: 'Query YuLife Life Insurance Policyholder Records'
+      operationId: findYulife-life-insuranceQuery
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+        -
+          name: sel
+          in: query
+          description: 'Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.'
+          required: false
+          type: string
+        -
+          name: unsel
+          in: query
+          description: 'Selects which fields to not return from the query. Others are included. The value should be encoded JSON.'
+          required: false
+          type: string
+      responses:
+        '200':
+          description: 'The query succeeded, and the results are available.'
+          schema:
+            type: object
+            required:
+              - key
+              - request-id
+              - success
+            properties:
+              code:
+                type: integer
+                format: int32
+              success:
+                type: boolean
+                default: false
+              'yulife life insurance policyholder records':
+                type: array
+                items:
+                  $ref: '#/definitions/yulife-life-insurance-full'
+              request-id:
+                type: string
+              message:
+                type: string
+              url:
+                type: string
+              key:
+                type: string
+                enum:
+                  - 'yulife life insurance policyholder records'
+            additionalProperties: {}
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+  '/yulife-life-insurance/{id}':
+    get:
+      tags:
+        - yulife-life-insurance
+      summary: 'Return a specific Life Insurance Policyholder record by index'
+      description: 'Find one YuLife Life Insurance Policyholder Record by ID'
+      operationId: findYulife-life-insuranceByID
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'The YuLife Life Insurance Policyholder Record ID'
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 'The find succeeded, and the results are available.'
+          schema:
+            type: object
+            required:
+              - key
+              - request-id
+              - success
+            properties:
+              code:
+                type: integer
+                format: int32
+              success:
+                type: boolean
+                default: false
+              request-id:
+                type: string
+              message:
+                type: string
+              url:
+                type: string
+              key:
+                type: string
+                enum:
+                  - 'yulife life insurance policyholder record'
+              'yulife life insurance policyholder record':
+                $ref: '#/definitions/yulife-life-insurance-full'
+            additionalProperties: {}
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+    put:
+      tags:
+        - yulife-life-insurance
+      summary: 'Update a single Life Insurance Policyholder records via index'
+      description: 'Update a specific YuLife Life Insurance Policyholder Record'
+      operationId: updateYulife-life-insuranceByID
+      consumes:
+        - application/json
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'The YuLife Life Insurance Policyholder Record ID'
+          required: true
+          type: string
+        -
+          in: body
+          name: Update
+          description: 'Update body'
+          required: true
+          schema:
+            type: object
+            properties:
+              Policy:
+                type: string
+                description: 'Policy field'
+              PolicyHolderFirstname:
+                type: string
+                description: 'PolicyHolderFirstname field'
+              Smoker:
+                type: string
+                description: 'Smoker field'
+              DOB:
+                type: string
+                description: 'DOB field'
+              PolicyHolderSurname:
+                type: string
+                description: 'PolicyHolderSurname field'
+              EmailAddress:
+                type: string
+                description: 'EmailAddress field'
+              Provider:
+                type: string
+                description: 'Provider field'
+      responses:
+        '204':
+          description: 'The update succeeded.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+    delete:
+      tags:
+        - yulife-life-insurance
+      summary: 'Remove a Life Insurance Policyholder via index'
+      description: 'Delete a specific YuLife Life Insurance Policyholder Record'
+      operationId: deleteYulife-life-insuranceByID
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'The YuLife Life Insurance Policyholder Record ID'
+          required: true
+          type: string
+      responses:
+        '204':
+          description: 'The delete succeeded.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+  /yulife-life-insurance:
+    get:
+      tags:
+        - yulife-life-insurance
+      summary: 'Return all Life Insurance Policyholder records'
+      description: 'Find all YuLife Life Insurance Policyholder Records'
+      operationId: findYulife-life-insurance
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters: []
+      responses:
+        '200':
+          description: 'The find all succeeded, and the results are available.'
+          schema:
+            type: object
+            required:
+              - key
+              - request-id
+              - success
+            properties:
+              code:
+                type: integer
+                format: int32
+              success:
+                type: boolean
+                default: false
+              'yulife life insurance policyholder records':
+                type: array
+                items:
+                  $ref: '#/definitions/yulife-life-insurance-full'
+              request-id:
+                type: string
+              message:
+                type: string
+              url:
+                type: string
+              key:
+                type: string
+                enum:
+                  - 'yulife life insurance policyholder records'
+            additionalProperties: {}
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+    post:
+      tags:
+        - yulife-life-insurance
+      summary: 'Add a new Life Insurance Policyholder'
+      description: 'Create a YuLife Life Insurance Policyholder Record'
+      operationId: createYulife-life-insurance
+      consumes:
+        - application/json
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          in: body
+          name: Create
+          description: 'Create body'
+          required: true
+          schema:
+            type: object
+            properties:
+              Policy:
+                type: string
+                description: 'Policy field'
+              PolicyHolderFirstname:
+                type: string
+                description: 'PolicyHolderFirstname field'
+              Smoker:
+                type: string
+                description: 'Smoker field'
+              DOB:
+                type: string
+                description: 'DOB field'
+              PolicyHolderSurname:
+                type: string
+                description: 'PolicyHolderSurname field'
+              EmailAddress:
+                type: string
+                description: 'EmailAddress field'
+              Provider:
+                type: string
+                description: 'Provider field'
+      responses:
+        '201':
+          description: 'The create succeeded.'
+          headers:
+            Location:
+              type: string
+              description: 'The URL to the newly created instance.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+    delete:
+      tags:
+        - yulife-life-insurance
+      summary: 'Remove a Life Insurance Policyholder'
+      description: 'Deletes all YuLife Life Insurance Policyholder Records'
+      operationId: deleteYulife-life-insurance
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters: []
+      responses:
+        '204':
+          description: 'The delete succeeded.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+  '/yulife-life-insurance/distinct/{field}':
+    get:
+      tags:
+        - yulife-life-insurance
+      summary: 'Return distinct Life Insurance Policyholder records via field query'
+      description: 'Find distinct YuLife Life Insurance Policyholder Records'
+      operationId: findYulife-life-insuranceDistinctByFIELD
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+        -
+          name: field
+          in: path
+          description: 'The field name that must be distinct.'
+          required: true
+          type: string
+      responses:
+        '200':
+          description: 'Distinct fields response.'
+          schema:
+            type: object
+            required:
+              - key
+              - request-id
+              - success
+            properties:
+              code:
+                type: integer
+                format: int32
+              success:
+                type: boolean
+                default: false
+              'yulife life insurance policyholder records':
+                type: array
+                uniqueItems: true
+                items:
+                  type: string
+              request-id:
+                type: string
+              message:
+                type: string
+              url:
+                type: string
+              key:
+                type: string
+                enum:
+                  - 'yulife life insurance policyholder records'
+            additionalProperties: {}
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+  /yulife-life-insurance/count:
+    get:
+      tags:
+        - yulife-life-insurance
+      summary: 'Return the total number of Life Insurance Policyholder records'
+      description: 'Count YuLife Life Insurance Policyholder Records'
+      operationId: findYulife-life-insuranceCount
+      produces:
+        - application/json
+        - application/xml
+        - text/yaml
+        - text/csv
+        - text/plain
+      parameters:
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+      responses:
+        '200':
+          description: 'The count succeeded, and the results are available.'
+          schema:
+            type: object
+            required:
+              - key
+              - request-id
+              - success
+            properties:
+              code:
+                type: integer
+                format: int32
+              success:
+                type: boolean
+                default: false
+              request-id:
+                type: string
+              message:
+                type: string
+              url:
+                type: string
+              key:
+                type: string
+                enum:
+                  - 'yulife life insurance policyholder record'
+              'yulife life insurance policyholder record':
+                type: integer
+            additionalProperties: {}
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '404':
+          description: 'No results were found.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        '504':
+          description: 'The request took too long to process, and the server timed it out.'
+          schema:
+            $ref: '#/definitions/ErrorModel'
+        default:
+          description: 'Response from Server'
+          schema:
+            $ref: '#/definitions/ResponseModel'
+definitions:
+  yulife-life-insurance-full:
+    type: object
+    required:
+      - id
+    properties:
+      Provider:
+        type: string
+      Policy:
+        type: string
+      PolicyHolderFirstname:
+        type: string
+      PolicyHolderSurname:
+        type: string
+      DOB:
+        type: string
+      Smoker:
+        type: string
+      EmailAddress:
+        type: string
+      id:
+        type: string
+  ResponseModel:
+    type: object
+    required:
+      - request-id
+      - success
+    properties:
+      code:
+        type: integer
+        format: int32
+      success:
+        type: boolean
+        default: false
+      request-id:
+        type: string
+      message:
+        type: string
+      url:
+        type: string
+  ErrorModel:
+    type: object
+    required:
+      - code
+      - message
+      - request-id
+      - success
+    properties:
+      code:
+        type: integer
+        format: int32
+      success:
+        type: boolean
+        default: false
+      request-id:
+        type: string
+      message:
+        type: string
+      url:
+        type: string
+host: 'life.yulife.demo:2003'
+schemes:
+  - http
+basePath: /api/life

@@ -1,0 +1,14 @@
+{
+  "$merge": {
+    "source": {
+      "$import": "../defaults.json"
+    },
+    "with": {
+      "name": "YuLife Income Protection Insurance",
+      "backendBasepath": "http://income.yulife.demo:2002/",
+      "summary": "The YuLife Life Income Protection API gives access to policy-holding subscribers to the income replacement insurance service.",
+      "path": "/yulife-income",
+      "version": "1.0"
+    }
+  }
+}

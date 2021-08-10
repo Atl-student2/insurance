@@ -1,0 +1,14 @@
+{
+  "$merge": {
+    "source": {
+      "$import": "../defaults.json"
+    },
+    "with": {
+      "name": "YuLife Life Insurance",
+      "backendBasepath": "http://life.yulife.demo:2003/",
+      "summary": "The YuLife Life Insurance API enables full access to Life Insurance Policyholder records.",
+      "path": "/yulife-life",
+      "version": "1.0"
+    }
+  }
+}

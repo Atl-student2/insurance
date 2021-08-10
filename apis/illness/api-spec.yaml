@@ -1,0 +1,258 @@
+swagger: '2.0'
+info:
+  description: "The YuLife Critical Illness Insurance API gives access to Income Replacement Insurance policyholder details.\n\n![enter image description here](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAMAAAA3vsLfAAABiVBMVEX08P/HtP3/3QDq4f/7+f/49f/28//jDXb/3wBkADj59v/8+v/z7///4ABcAChhADNfAC9XAB7HiABZACJbACZeACz///9XAB3Esv/iAHDiAGvw6v/n3+5zPgB+Q2HqhbKKV3Ly2u9VABe4nrLGscTUvteZcYh5OVnItfZNAACkgJZuH0ju5//Vxdf2///h1uewlKfQv9Guj6RTABKQYXvBfgCDTGnAqbzx02WWbIShfJOnh5vwxOBsHEVyK0/jwwDnugD556PnW5nhAGLrk73lQ4v743v65ZT27eDdqgDltgDWyP7KjAD20ADpzY2wmJJjHABqLADMvb/wzOXut9b46sX46bn94VT27NdDAADe0v7TxP7gxrDcw7vHq9bb0NeZeGaCVjZ7SyLDsbCTcFzoaKHlOYnpdamojYPtp8uScWlyPRyWagC3jwDZtSD+30KUhCtoYDOqlyZbVTUAGT8TIj43Ojr94WLpw0XbupnQnETUnQD65prp0abfxbbHlGnHm4zHj0Tu0HjHUPszAAAbYklEQVR4nO2di3/aRp7AZTIzRTOyJCwkbKNQIlSIcBQhwLBAoWmTPpLGfaRJkzR93e623d5js3u3e73d3t5u9y+/mZHAEiAQNn6E5Pf52NigEejr3/zm9xpZEF7JK3klr+SVvJJX8kpeySt5Ja/klaxXEJ4jF/2hLkggRCmPRJ+9Pit30o7eDBlfLX7wsQnTDcGv7+/NyO1rLxM3/E0ACz345NNPvkl35fj1vddmZP9lwoa//eSTbxg38u3Vq59+nE7dXnps8MGnV6/+C52o6Bv6w6fm6bQNAbZa0LMCcMaf+4IFffPJVSomAr+m1B6kXA2TsF17B6DP3kH4x9fe3XBu+DdUy67+GnNli71y48qVG8WEQRzb+CuCbZ+gN99F125f2/gJCx5Qffv029/Sb7+JWDbpSiA3pDljGLbvb76799q+cOdOcf+1vTvSPse2RwR8Ez989yYRAAAb7cmBj/k8vXr1t5GJVbwykRuzQxi2/c8e7u99d3PvzjWK7fXiGBt687Vr+3v735Pv9vfvbPRMBWxZiK0HHzx69OjJkydmCG5mqjJsFBlDd3sW202qbTff+eGm8NrDjZ6q3LBNlA2/lwnlUZLCcdu2L9157ea7+3OxEen2w4cPf/huo6epAH5HsX0cXOOjzETMyEyNkePY9u4UKbI5k5Rhu3b7DpXN1rbAafsdxxahlrkSlejxoQOCwQ97dK5+v3/7szcDbPs3AccGwP6bN28+/HGzsQnCp1c//Vc2SUGE2uMl2PYfCvvM77h5DfFVlbq7e+/8+ObezYffA/Tw9g/fbXyUSv7t3//j988zmefPI9jeX4bt2h3+8M7rPzD/jWGTfvys+BBeexMJsPjjQ2nDqT16b5tKZkqeLMa2987NwM/d29ubxKQIsYwKw4XQZkN79NM0r1CKMYkOCVZSZtBe0lD+0XsJzDKZ95JHBZP03Zc0AwLeT2RG5YPkgS9z4ghNFC07x7Bl3l8w9CXG9vkEUDbzhz/+5zS3x4vG4ju392fkdkK6ZKMkYtO2/+tPf/7TH+LcFhg2Jqg4K5vubjB5fEwom/nv37/1xz9HsD1+f4Fde5kltn5y0zbRtscvgdKcUKKB5xhdKqN2uUW6kZBWXZM8n8F2LD+d3duerYzz0We2Mn2wgNoLi+3GJAw8K337fPOwFZPC5zXKQmxLXI9LJ1KxeOPGlbicjb7NrggvKjZpGthYzsLAoUXYFgVVc051RvkhGO+qQPObLIpBvr545Y0ZbnPqbaeW5LTHStgggJ7rehJZe6UFVfzoObFbmTfvAoPWrI6c3qzWnYG+kXVgQ8QvO6Ne2XJG/TUbE9yzHDtQMPYduY5Wm1dzlagInqXofSjNyHo/Epe3k7H9b8pTYLPmdEwCAKhYTsqWm7QCaqo2CNStS7nBbkHREkvVpKzo9XOqLCZP07fTnQC7hXybcFrAWzc25Iolri2k3GRAUFm0E1vIQFU9N2xCYoYyHTZkFhRl/AvoeohabUwkKLEVAgFgmoHBQwgCFHuAAiSSRCIUEAYmeyI4CBQBfcYwKDaI262KQSCChhFwQQCaAjsTtauSifhP54pNeBKLsLLZ7ErYSEnRm5PPCiVB8uzBsOI7moewWbWq5fxAoiRMt9J2MPLoQyt8APaw1Rq5k0kHzX6r3R76OHi15vQQPdfBAEN/qIvD0bDLTqIReihwy1p/1DHp36bSGzqtkgfPGxsF9/7zY2RHbx0F4D5PMxR5lkgBRZ8aOHq+21H0qmFbLY8Y3ZbqQeQNNdXC/CEP6NzLq2q9WtUVpeWH+gbdnOUZI9Ux2UG6a4mO2aDnagCPnk4pNwauR4eJFBtpOjVs5vQhkcQeNuycYlHrcN7Yxgje4hJSS4cNN2SxEF+rjJoidxstx/ZaepVd40jVJWoCNdHCAvbzYh4I2M6LmgBAcaiIagCdzna5QYqO2HIBPUiW8oUDbFBdbmBEeqreIBixYRQbtFs5D9gFxSLNfKEBjbYiU42/UGxjaplHacbgqirKobpgQgUKoKfKFeJ6FF+eaRIe6Hqf6lmOYWMPFBuiEDU6BHoFUQuMPB3G5vVA6+HgIMnmT1Js4wc+jGFTFfpd6mhd4DuOD3FFV3vgIrEdZcbU0mPTAmxSXRyNxC7k2DCCdPrm2PSFVEXUBGxUFcemEWpcbTGhr5r0IIhCczWDjX5XOtQiAvo3wp4HsFGRLxLbUeYYWlpsDV0shF6HUVL1Ngm0DQvQ14JXIJ1ylgnnY2NA+KUiqndWONv5QYEKzsMGKzLHxgUSr9keKReITYhCy2SepBmC3IKYD406m411nIAtQdvopcqNAFtOzIX8l2Cj9lQ5IMH7Q6+U9y5W24S435YKmwAOFLUdXAPDNphgQ+ZkksqiCDg2MIuto1jBQixZotwNnbIl2kZnfajhdCHP2QBfJmzpilbQbYmWx68xjk0gHSVvB0uCPMBsElLbxYngY2xYVksBdFJTlCHLd0AY2Db25DQ2j9s2+gdRewZzrOl7aC58AbEJoNJSRJO56aAZYGsreoVfo6X3mANyoIsC1ya9Tgi98JwJOTaGtJvTw5kJ/Zao1lwk2RXMDhovr2zFwHVdKRkAsWEqtZ5VWcz3PGw2vCG1aobBjJ3BDlb7F7AknAgb9djFXK5hElLsaS1m20RVpxfBotW84xKj4gwZGVCWRVkcNWW9UPMgvf68SyG2Dia74kizpSia5XQwhalaLt/INFT1ssEyH4pe6zWMiqa06MlgSVPUXOtpw6hqolyrtmVRq5js4BE5GzYLZApb6g8Acbece+o4+c7Ap2ths1Mud5psUYTSQCyXDirBPkupnbPKnikOfE9i2ESn3K51wXGEQdxOrnVQoWaQnqFcZuEtP1eX+hl2Ta3ZhL/Qk5iKj6xCh8ZlqJezOi4qFWpNiR9cOffqLo5jW0HdIQCSRL9hpiEYUBl7wIDH7IEAjFmEjilFPkkBC8jjp8H8aMTOEMbp4bkgf+QvBF4egDiI38OT0qdh5I3PUaZylmf5Z5ssCRsgHxxtnwYbxNGHxcKw5RLeINUJLpF8cHg3yi3tMD6dIJF8uhxgItnNFJfNYvKcN2dCsfNcwGp4Gvng8PAouzI2qVc2EWqIBY2G1wOxUJib7I8L8kQtnxt5M/oGK/Q8hfNfDU8jFFtmZW3Dg5xMA0TSU1nAQ8qKUkqxL03i9cF4wokzJH1dlBOxXcoeqCc7t7KrY2tYWhsIsMvjRFzRU2GbI8hswiCATcRGeue/Ti6XR9vH1LLb2ylHwcZA4Nkhho3RC7GxikGkNgwnP8Px/TIQjL4uiU1qJENskZFocnsN0nTAJdzjEGlt2L718610HxBiQ3DRFDZWhPEh8Ww/nFeYhkw+L3VC5Fdsj29PMrsVvxiaf+AN8wPTlAJsxOvawUgs+d2uyxcd0C/oprnm0tgaJNL7fOtw5zDdelbp11rUtsWwwW69ZNXMmqNpOjf7oOk0/aFm06XWbjXd3tMREHBVt+2hU+FqZVYdRdScp02WD1elDh2pMkC4WamUncIBXXRsGpqJjuNcuvXiGNv23Z2dnXTYpANVKU9hE1BJV0YVz60pSo0F871W1cBuzvGw67QNZDREgvuODyAc8WSbIElVGoZ7nsm0Ta24dKRK/xig1+oTY6Cr9CwmdfV0z5tdfS9ajiv02bcO02LDDX0WG/utZiBs5ljGFtqWRgNzpKk9oyrXCBJIFUNLrlAbZgbaxpM+Y9um05GeJlp0YrYUR0BSjqU5WXpYJpfQtkUaG7bfuvs/KW0bBTWLzc8rLBcBcixTSWpKQcLYEJWR0Vb1jsdq+FJL1JrCJJDHVZ4hmqykEs/O4aZFfWhDYTXFMMF5+STaD5LdTtnxvBAbZtigaYlyZVAtW5ZqdAuiYnXokkBqqqhrrPLMZT42VgyjkfrlxsbaGo43D6XsQU2BjcWfnskFgbaliEqLzkeTmXhdDyOsBGyIuL129fJju3tv+2ywQcQDA0TsA00RWz6E0iCvi4oeeihzsSGp5Pjkkk/S9zLb947D0pQ9qCmwsXR4k/sNSKCmndhDRa1KEgLSgAJ1A/9sHjYER/qBIZAJNvlyYsseHd4fRwprw8aWBFHzDYyJD9qsgCDJFFufeSZdWQux9VV9QD0XvpKOsUG/IA6j2LTzXkdZF/WybsyfeEyVWQ0bj0I5L1Eh3B0ZEV6IFw1+8fSCWXFLLHQGddEm5R592hi2fOmpC1i3jByeppEXFdPwWEapwOryBTFnYp8qWIMAGt3b1FmhSjug/tupOKwgx13Ui/sx43u+U/ag4pomt0yES5rsuNR9pQ8eAuUc+w13W7JVB6y4pau65dgAtJ2eBLpP60RyWl0slINKC/uQuqw7Bco1J7dsiCt0ZBPAoaxaTr8k0zVXwIOWXnDKp2ORVuKd5wvbph+fABuyK0xooMlECn6T3ODBbNDvDerXY7PZbjdNarukbrVc7nusztxol8uNsQNCrX+j2jRBMNIcj5QG9GBiVqs2q7vY/b5/LtZttl1/wUx9fhJtY2kMCOc/CPyB350BA4C5YYLjn9hTsYIJxhjNjMTsYIR5bYeOxeeROZq7xyFZ4eJdlWk7njdOkjaGJB0fhZY5StnxPBYET3G/XTo4xeSbeot0g1aVYgK0ZG4Ram8dHv5lpcVe8rrVeBEBSOkvyvSbI3fZ+0meXY1kjumvdXHtxZokVVswTyOR/M7OatikhpOXY9hAzymlPAPyRgXdWoqtQt/iGBuyNU0vrBnbAlVLVjcekmb5FD3cOfxyJW0jdV2JYTMdcTmJUKBJPdmlB5O+GibcIfPdAPUUtfViW6RqieqGKbV7P99i/u72/VWxsfAghg2PLD31th2UT4GNNVFybJhXUnlhf53YpCXQrsz3ewHPTh6ylsrs0f1VsFHbbIyxseJJ0J3Bagcw9CdQ8MCODH2IY5eEPS0zbPTFiRc3OY57LIH7EWIDrjMgEIXYIH917LcIEMIT+SjSkvmZzO2DoITAO1Gz2+lad/klAr9abpcVhg0T026Aettke/4GnsCd166EmBdrI4H4vXKPe6zAo2MaYw3j2Ijda1cC9SEufbXL/DYoVdrlXoXVYwJsCFQstd2tuKxjXyNCpU1PiEIvGZnczV6J17zdu8ky6/Y+YTWE+7fGQWm6HlQ6ZbwDzQWuKLKyQV0vFNpdS+54NU2j4ZXZkmVHorzKrRql0HFc0nc6WAADh47Jt/AEm9wd5S21wPtZQfVpl1SckSRgu2N6fSsvSiE24rVFRVTzrQFgtQVbzmmqY0NQtWhMhgUazjnpqg2r0VoA7slkSVgFG43TLQ8zA820jXQUtVex5JLB8hU0OK3rQddkwzERKOX6BEk5rQF8p2NQy25FsFWg4Wtiy2OVBqtkCGQo94jnaE3AMunUmoXaZtR1vWkQzCZp3gNsLRIBkgoi63hFntNI4fcUTwRsLPGcyNQO8JTYpDzvNA2XBNzQ1TbptykjLcj2BHuLcLVNYDfHesrJUBmxS/cAwvaYPZukUDBKrNsXuS3WxAraqoZdR2uDMA0V2jbc562uwZJABAbMMhFp8wZU6DvLp+ipmM2o3NT9BtL1oOKBzvuax9gqstoGvFFP5bxIjW/XIEOXpd1yJgGkpraMgS7m6tJkBQiWBAGUFZlvB8n79LiqbpmgUjURs2JDMBcb66zmDenQ1kSRvthsL1O2dLZ/mRz7IpF6H8u6pcNGDhTuOsSwsReAHqgZvdYaQaZOWM+zWm3XRrXakHgtUdQLdSG6JEywiaLabpdGo9oBywUTyaWQk7GBoI8f5XlGtOQvWUjXoGqBjLV6srE0yysK6bAhTVyIjTXDWyauBB32Ob7JGdDjXF0WRXkozcGGcyLTtqAPlbidjt1IgS0otErWEk9uFYX68MOFjMPPPtnHzJzdW9l0TQMUm9ydnqQRbGyRkCsG1RuBAsyPtx4jKDV1XZTDbQRxbVPFyQ5V0HdKBlg4SUNs0NeUA6NbXYgthUd7TO2L3d0vFh4RcJskd2lEunM3m84BJyOF5cQDbGQONlZkKBd5rZn6KCXCG5GQS30F1J90J8WxdRRR5Fk6iG2L7YtMg40ZU8ssL4w1VqF25Yvdra003B6Pt1xlb+3cT9u6i5uymG8akNAIcWjMwSYIOVEfMIXEdVnU2yYhZhO2WXnUqOmhAYf5CDbY1US15FGj1ij2VJV1jwTbISuBQg/oYm0gOMYGQ2wMZ0NcOEdWsWuM2lJu7KSZzLjlOcvct1TUqIiqmO9UKj36x/YhGNCI3uDPj7ew0YVRbAV/bHqoWhgOn1KfV5EwMkZOoByB14UFg+2SBAKo6aJSGB48tQklrTU9+qfJeZiem9V1oE99mobXBaxYU0SsWMOcF6p91CYu7hteAVtAjXJbdBBfTjPMoh07ICmpIXNUkK1Wt+uIvbrnWYWC02ATse8UrBHf0+E7rUCpkFmy8rI18iCsOLmu27PssIOwRw8+MGGXPuSZ5rRbebmguICS1mSnZOpazvK9gkXPDalD18o7I1M6oL/2EGq3Ci1+9wagFqwlEcLsPULmi3AjpEalmDyKnRJnDg/vba+MjYakbtenMaZHaGjOexY8UxDMoHuBH2Ga432ixAt7/Fi3X8Uf33knPFgKRjM7ZdpdF/MQ3e56BEq2C3HwKivFeL5HfZrgrY7fiD5zsKbmt+LWsVxffOiTzNGtk/TXh72mQQcVQuN7HaHjmx5FmquOO0pjqYrw4MjoyHF8cZh6FU0NYjkTGnSk6e1PIVKE2tbu9YUa/HYmG9uFu8LbJJ/33KroyGx6xmhNHarXt2Lcni3yoKfvt5jyLVgGbb5FYYmy2Cup/zPgCQSMNNFfGlilEnR9dyvO7cNkbjP3W0z3HlK30c535n5cu9HWowlfZM/b9rImAaN8Pn02eZGgZ1PUmBuS+MFn7l6f8k28vKqW52FDnhrbowDK1jgVdgZah8z6YC1TFM5SW8DtyTS15ynfhhVG5mJjm5mj2EhB0YJGXSltaWYVQRivhdqHc6gx923+yaeppcYWtjzPe6UiR7HBrlULbo7VSb4p1kUL/GIutSRu72W3s3FsaW9WHGCDYLzblvVrBKWUIIZkrwSNzYAYLEaF5ZZvcN8NsA6P9VzumiSRGuV2Y5bb29l7d+M3AVkNm1EZWWKXl1bcfs3RSsz953c5Ya+oVXZzdtNt1GyI3SENvzolGg7VR2251rhM3NCVRGqU20z15fPsvcOdn+N3rk97112GrdSulvP81lhgcCAZnqKwOyNybav2OgVRV01ktlt6zsZuYyQq5X7Vg0ORqltNuUSbWhZSozK1UH/Od73cPzm2soGNOpuryHSoz8HKMWHuv2YA4udEtUwQEVm6DbF6gU8waBTaBl1SR5enGxfdWEwtHmbB93k5eecoPklT9qBOdsG4mjIkglSw2oDd/URDk3Iwaei8SMLrKwIIH3pqvksgujx7gZZSi4ZZCP2V8eKpIrossH/XFCwOK2JDATZk2ggCqSDmIs0HrIPXhyCGjeXptJp9ATdSSJLiEmhbkTAL/uVwZyfUr+1bO4c/sy++OJwMm4AI9OsdJYaNDNn0jGMTJEUVFW10hoHDaiItpzYJsx7tUGrhToTsEf2ZC18c0t51dwobbrQGEp2kMWy8ujWFDZkdth+mcFn2h15fACsiX6An7/OqQdj1kdm+F1LbOTw5NtCxOgbvjo9gAzrb0TKFDSLiluki28fCuTTkLpaZ8D0K7cFHv5rI81DDDg/DLBvrmwmFPZH6ZsVRbLCbU/uA56mPsSEvJ/fBFDbYoGMMO0/XWHNQuWhuc8L3CbUvszEJWGWOMtvhLVCz90Nl46nxENvS/Zu4OcbGbkhH3ZAhBmaw8ye8qR/payPE7zQrM2xlXlUhZeYRG6P8gH5ZF3H7sIjMDd9Dao+jDsb20aTcwoBlbtGvbOZ+QI2/EnQ8wy+eLeFGyjq7vyao5BWriP2WqIya9RydfCauFNQRwaTrdFiUgHVFrrPtMpaYb9ftquMSIBQUCVri/BTKuUlC+M6pPedta6GWsckZKbds3z9kE5NzG8/Zt8MT7l5f+G+rYHdYq43qyB2NaqO2BJqWJTdJ1SmUfez1a61RvVbyeSTQH9VqBz5iiZHW0CZ+zSnXxZ6EcMNJ3a16JrIoEP2IKVX2o68e+KEd4+WWcIsVK8Nv8yk7oRZgC5R3ThAbeVN211gsIMAfBIxMjAUgsbtbI0ww20Ia7hilB/CYHhOBsBtjQ9OEvKdUEi7Sti2i9owxesyW0geBut29y6fqvVtBz+nd0AmZlEopNiSFy8vulYs22WcoiwJRrmyZ3d1jE8fUjHtq94Oe03FBfjJz30Y3jocnJ4VfdFmc9KCWLfslPyASsG//zJaAW1OJtjG26Pl2n1305Z2RLA5Ed9lMfMZ+eCM7je3e9jxq2b/Fzrd7vXhs4Iob8x8hl4XvFNb29Wls3ME9zMzVtlA3I+COs8JXpttXX1hZFr7PxcbuZPTz0fw5OoMtYuDCvpEz/B955yRLw/f52IJ8UUpsNPwP9W3ScPOig1sQvi/ElizZ/5ud9bthenOqU+lFlQXh+1qxbe1u8YUh2uL14tq4BeH7mrGFnu9sa9wLKAvC9/Vj4wvDVE/hC2nhFoTvp8L2VVJ5+sOZJvUXUOEWBKJng21rd05v/43ii6VyKamtE9tW0paIGzeKxTP5h3lrl2V15FNge7AytojuXTSXxZKa2vliu+TmLj21E2DzT4XtEjt0y6vvF4nt0ipcMT21LdajsBq2N06L7cz+z/bpJFX1PZSv71Ppnje2S+kIr0Bt66+8AHr9vLFdPn1LEb4fSzeoG//9vLFdOvOWJnw/ll/CJoWvZ7EFrVmsOyv+QvbrZGwvrKQK3yfy9bi34+9bu19PYftqnKp743F207GlC98n8o+dHWrcfqE6t7X1LAnO7m5c254lnu6ir/6kkjYQHQvlxRTu+i+/bG1dj9apsj9Fi3ofxcoMG4dtVWpb/zj8eotbNgYnhu2fUWxfxrAl59kv+vpPJmhValyoxnU5nEwitgebjG2FQDQqlTG26P7H7EdRbPFaYPKpLprASeSE1Ji6BXCiC2as9B5fZLeT3+aiEZxAVgnf58rur5KwTa0WG4VtlfB9PrZ/RrHF6iy72U3Ftkr4noAt6mbEM9/x1WKTsJ2a2tbu36LYYincoE91LJuDbaXwPQlb1DuL5yJjZm9zsK2D2tbuV1FssTRHzOxtDLbVwvdEbH4UWyxej5m9ow3BtmL4nogt1hcYCzxj8/f5ZmBbORBNkmfR5t1YBBWbv5uBbW3UeBFrgi3enxuZv9nHm4DtZOH7XIk6tXHnLBpdxVJKU/L/cGC400cBNzYAAAAASUVORK5CYII=)"
+  version: 1.0.0
+  title: 'YuLife Critical Illness Insurance'
+paths:
+  /yulife-llness-insurance/query:
+    get:
+      summary: 'Query a specific set of policyholders'
+      description: 'Query a YuLife Critical Illness Insurance Subscriber'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+          maximum: 1000
+          minimum: 0
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+          minimum: 0
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: sel
+          in: query
+          description: 'Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: unsel
+          in: query
+          description: 'Selects which fields to not return from the query. Others are included. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'The query succeeded, and the results are available.'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/yulife-illness-insurance'
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  /yulife-llness-insurance/count:
+    get:
+      tags:
+        - 'YuLife Critical Illness Insurance Subscriber'
+      summary: 'Returns the total number of policyholders'
+      description: 'Count a YuLife Critical Illness Insurance Subscriber'
+      operationId: 'Count YuLife Critical Illness Insurance Subscriber'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'The count succeeded, and the results are available.'
+          schema:
+            type: integer
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  '/yulife-llness-insurance/distinct/{field}':
+    get:
+      tags:
+        - 'YuLife Critical Illness Insurance Subscriber'
+      summary: 'Returns a distinct policyholder or set of policyholders'
+      description: 'Find distinct YuLife Critical Illness Insurance Subscriber'
+      operationId: 'Distinct YuLife Critical Illness Insurance Subscriber'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: field
+          in: path
+          description: 'The field name that must be distinct.'
+          required: true
+          type: string
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+          maximum: 1000
+          minimum: 0
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+          minimum: 0
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'Distinct fields response'
+          schema:
+            type: array
+            items:
+              type: string
+            uniqueItems: true
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  /yulife-llness-insurance:
+    get:
+      tags:
+        - 'YuLife Critical Illness Insurance Subscriber'
+      summary: 'Return a list of all policyholders'
+      description: 'Find all YuLife Critical Illness Insurance Subscriber'
+      operationId: 'Find All YuLife Critical Illness Insurance Subscriber'
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: 'The find all succeeded, and the results are available.'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/yulife-illness-insurance'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+    post:
+#      tags:
+#        - 'YuLife Critical Illness Insurance Subscriber'
+      summary: 'Create a new policyholder'
+      description: 'Create a YuLife Critical Illness Insurance Subscriber'
+#      operationId: 'Create YuLife Critical Illness Insurance Subscriber'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        -
+          in: body
+          name: data
+          description: 'Create body'
+          required: false
+          schema:
+            $ref: '#/definitions/yulife-illness-insurance'
+      responses:
+        '201':
+          description: 'The create succeeded.'
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+    delete:
+      tags:
+        - 'YuLife Critical Illness Insurance Subscriber'
+      summary: 'Delete a specific policyholder'
+      description: 'Deletes all YuLife Critical Illness Insurance Subscribers'
+      operationId: 'Delete All YuLife Critical Illness Insurance Subscriber'
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '204':
+          description: 'The delete succeeded.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+definitions:
+  yulife-illness-insurance:
+    type: object
+    properties:
+      id:
+        type: number
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      DOB:
+        type: string
+      Email:
+        type: string
+      FamilyProtection:
+        type: string
+      MortgageProtection:
+        type: string
+      RentalProtection:
+        type: string
+      Product:
+        type: string
+host: 'illness.yulife.demo:2001'
+schemes:
+  - http
+basePath: /api/illness

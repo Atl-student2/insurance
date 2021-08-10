@@ -1,0 +1,265 @@
+swagger: '2.0'
+info:
+  description: "The YuLife Life Income Protection API gives access to policy-holding subscribers to the income replacement insurance service.\n\n![enter image description here](data:image/png;base64,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)"
+  version: 1.0.0
+  title: 'YuLife Income Protection Insurance'
+paths:
+  '/yulife-income-protection/distinct/{field}':
+    get:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Return specific Income Protection Insurance Policyholders'
+      description: 'Find distinct YuLife Income Protection Insurance Policyholder'
+      operationId: 'Distinct YuLife Income Protection Insurance Policyholder'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: field
+          in: path
+          description: 'The field name that must be distinct.'
+          required: true
+          type: string
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+          maximum: 1000
+          minimum: 0
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+          minimum: 0
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'Distinct fields response'
+          schema:
+            type: array
+            items:
+              type: string
+            uniqueItems: true
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  /yulife-income-protection/query:
+    get:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Query by field all Income Protection Insurance Policyholders'
+      description: 'Query a YuLife Income Protection Insurance Policyholder'
+      operationId: 'Query YuLife Income Protection Insurance Policyholder'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: limit
+          in: query
+          description: 'The number of records to fetch. The value must be greater than 0, and no greater than 1000.'
+          required: false
+          type: number
+          maximum: 1000
+          minimum: 0
+        -
+          name: skip
+          in: query
+          description: 'The number of records to skip. The value must not be less than 0.'
+          required: false
+          type: number
+          minimum: 0
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: order
+          in: query
+          description: 'A dictionary of one or more fields specifying sorting of results. In general, you can sort based on any predefined field that you can query using the where operator, as well as on custom fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: sel
+          in: query
+          description: 'Selects which fields to return from the query. Others are excluded. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+        -
+          name: unsel
+          in: query
+          description: 'Selects which fields to not return from the query. Others are included. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'The query succeeded, and the results are available.'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/yulife-income-protection'
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  /yulife-income-protection:
+    get:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Returns the full list of Income Protection Insurance Policyholders'
+      description: 'Find all YuLife Income Protection Insurance Policyholder'
+      operationId: 'Find All YuLife Income Protection Insurance Policyholder'
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: 'The find all succeeded, and the results are available.'
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/yulife-income-protection'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+    post:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Create a new Income Protection Insurance Policyholder'
+      description: 'Create a YuLife Income Protection Insurance Policyholder'
+      operationId: 'Create YuLife Income Protection Insurance Policyholder'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        -
+          in: body
+          name: data
+          description: 'Create body'
+          required: false
+          schema:
+            $ref: '#/definitions/yulife-income-protection'
+      responses:
+        '201':
+          description: 'The create succeeded.'
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+    delete:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Delete a single Income Protection Insurance Policyholder'
+      description: 'Deletes all YuLife Income Protection Insurance Policyholders'
+      operationId: 'Delete All YuLife Income Protection Insurance Policyholder'
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '204':
+          description: 'The delete succeeded.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+  /yulife-income-protection/count:
+    get:
+      tags:
+        - 'YuLife Income Protection Insurance Policyholder'
+      summary: 'Returns the total number of Income Protection Insurance Policyholders'
+      description: 'Count a YuLife Income Protection Insurance Policyholder'
+      operationId: 'Count YuLife Income Protection Insurance Policyholder'
+      produces:
+        - application/json
+      parameters:
+        -
+          name: where
+          in: query
+          description: 'Constrains values for fields. The value should be encoded JSON.'
+          required: false
+          type: string
+          format: json
+      responses:
+        '200':
+          description: 'The count succeeded, and the results are available.'
+          schema:
+            type: integer
+        '400':
+          description: 'Bad request.'
+        '401':
+          description: 'This request requires user authentication, as configured by the server.'
+        '404':
+          description: 'No results were found.'
+        '500':
+          description: 'Something went wrong during the request; check out the logs on your server.'
+definitions:
+  yulife-income-protection:
+    type: object
+    properties:
+      id:
+        type: number
+      MonthlyCover:
+        type: number
+      CoverDurationYears:
+        type: number
+      DateOfBirth:
+        type: string
+      Title:
+        type: string
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      HouseNumber:
+        type: number
+      PostCode:
+        type: string
+      PhoneNumber:
+        type: string
+      EmailAddress:
+        type: string
+host: 'income.yulife.demo:2002'
+schemes:
+  - http
+basePath: /api/income
