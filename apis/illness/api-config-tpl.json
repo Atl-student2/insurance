@@ -8,7 +8,7 @@
       "backendBasepath": "http://illness.yulife.demo:2001/",
       "summary": "The YuLife Critical Illness Insurance API gives access to Income Replacement Insurance policyholder",
       "path": "/yulife-illness",
-      "version": "1.0"
+      "version": "1.0-1"
     }
   }
 }
