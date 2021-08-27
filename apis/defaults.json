@@ -36,6 +36,14 @@
   },
   "clientOrganizations": [
     "API Development"
+  ],
+  "applications": [
+    {
+      "name": "Bêta tester program",
+      "enabled": true,
+      "state": "approved",
+      "oauthResources": []
+    }
   ]
 }
 

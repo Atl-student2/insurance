@@ -14,20 +14,6 @@
       "apiKey": "82db51c2-4370-46d0-bfbe-8d1c727d86ce"
     }
   ],
-  "apis": [
-    {
-      "apiName": "YuLife Life Insurance",
-      "apiVersion": "1.0"
-    },
-    {
-      "apiName": "YuLife Critical Illness Insurance",
-      "apiVersion": "1.0"
-    },
-    {
-      "apiName": "YuLife Income Protection Insurance",
-      "apiVersion": "1.0"
-    }
-  ],
   "appQuota" : {
     "restrictions" : [{
       "api" : "*",
