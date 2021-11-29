@@ -1,7 +1,7 @@
 # Useful links
 
 - The [API Manager instance](https://ptx146.demo.axway.com:8075/) for this use case.
-- 👟 This repository's [actions](http://github.com/jcabrera-axway/techlab-insurance/actions)
+- 👟 This repository's [actions](https://github.com/Atl-student2/insurance/actions)
 - Agents 
   - 🟢 [Start](https://ptx146.demo.axway.com:8081/agent/both/start)
   - 🔴 [Stop](https://ptx146.demo.axway.com:8081/agent/both/stop)
